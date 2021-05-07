@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">    
+    <title>  Instagram </title>
+</head>
+<style>
+    .nav {
+    height: 41px;
+    margin: -8px;
+    padding-left: 283px;
+    align-items: center;
+    font-family: 'Lobster Two', cursive;
+    font-size: 30px;
+    display: inherit;
+    }
+    
+    
+.home {
+    padding: 1px;
+    margin: 2px;
+    height: 38px;
+    position: absolute;
+    right: 458px;
+    top: 4px;
+    width: 38px;
+}
+
+.inbox {
+    padding: 1px;
+    margin: 2px;
+    height: 27px;
+    position: absolute;
+    right: 425px;
+    top: 9px;
+    width: 27px;
+}
+.explore {
+    padding: 1px;
+    margin: 2px;
+    height: 29px;
+    position: absolute;
+    right: 385px;
+    top: 7px;
+    width: 28px;
+}
+.heart {
+    padding: 1px;
+    margin: 2px;
+    height: 27px;
+    position: absolute;
+    right: 350px;
+    top: 8px;
+    width: 27px;
+}
+.profile {
+    padding: 2px;
+    margin: 0px;
+    height: 36px;
+    position: absolute;
+    right: 305px;
+    top: 4px;
+    width: 37px;
+}
+.line{
+    display: block;
+    overflow: hidden;
+     border-style: inset;
+      border-width: 1px;
+    margin-top: 1%;
+}  
+
+</style>
+
+<title></title>
+<body>
+
+<nav>
+    <header>
+        <div class="nav" >
+            Instagram
+            
+        </div>
+        <hr class="line">
+    </header>
+    <header>
+       <a href="\"> <img class="home" src="/static/home.png" alt=""></a>
+    </header>
+    <header>
+        <a href="inbox"><img class="inbox" src="/static/inbox.png" alt=""></a>
+    </header>
+    <header>
+      <a href="explore">  <img class="explore" src="/static/explore.png" alt=""></a>
+    </header>
+    <header>
+        <img class="heart" src="/static/heart.png" alt="">
+    </header>
+    <header>
+        <a href="profile"><img class="profile" src="/static/profile.png" alt=""></a>
+    </header>
+
+</nav>
+
+
+{% block body %}
+  
+{% endblock body %}
+</body>
+</html>
