@@ -2,6 +2,8 @@ from django.shortcuts import render,HttpResponse,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import logout ,login
 from django.contrib.auth import authenticate
+from .forms import ImageForm
+from .models import Image
 # from django.contrib import messages
 
 def index(request):    # home page
@@ -12,15 +14,20 @@ def index(request):    # home page
     return render(request, 'index.html')
 
 def explore(request):
-    # return HttpResponse("this is explore page")
-    return render(request, 'explore.html')
+    img = Image.objects.all()
+    return render(request, 'explore.html',{'img':img})
 
 
 def inbox(request):
     return render(request, 'inbox.html')
 
 def profile(request):
-    return render(request, 'profile.html')
+    if request.method =='POST':
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+    form = ImageForm()
+    return render(request, 'profile.html',{'form':form})
 
 # signup working properly
 def signup(request):
@@ -66,4 +73,3 @@ def view_login(request):
 def logout_user(request):
     logout(request)
     return redirect('login')
-

@@ -4,6 +4,16 @@
 
 {% block body %}
 
-  this is my profile
+<div class="container">
+  <div class="py-5 text-center bg-secondary text-white">
+   <h1 class="mb-3">Upload Image</h1>
+   <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" class="btn btn-danger" value="Upload">
+   </form>
+  </div>
+  
+ </div>
 
 {% endblock body %}
